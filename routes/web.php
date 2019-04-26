@@ -18,4 +18,5 @@ Route::get('/', function () {
 Route::get('/books', 'BookController@index');
 Route::get('/book/create', 'BookController@create');
 Route::post('/book/store', 'BookController@store') -> name('book.store');
+Route::get('/book/show', 'BookController@show');
 // nameで名前を付けている。パスの代わりに

@@ -27,4 +27,10 @@ class BookController extends Controller
         $book -> save();
     }
 
+    public function show()
+    {
+        $book = Book::find(1);
+        return view('books.show', compact('book'));
+    }
+
 }
