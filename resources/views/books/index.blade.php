@@ -14,14 +14,18 @@
                    <th class="text-center">ID</th>
                    <th class="text-center">Title</th>
                    <th class="text-center">Description</th>
+                   <th class="text-center">Delete</th>
                </tr>
            </thead>
            <tbody>
                @foreach ($books as $book)
                <tr>
-                   <td class="text-center">{{ $book->id }}</td>
+                   <!-- <td class="text-center"><a href="/book/{{ $book->id }}/edit">{{ $book->id }}</a></td> -->
+                   <td class="text-center"><a href="/book/{{ $book->id }}">{{ $book->id }}</a></td>
                    <td class="text-center">{{ $book->title }}</td>
                    <td class="text-center">{{ $book->description }}</td>
+                   <!-- <td class="text-center"><a href="/book/{{ $book->id }}/delete">Delete</a></td> -->
+                   <td class="text-center"><a href="{{ route('book.delete', ['id'=>$book->id]) }}">Delete</a></td>
                </tr>
                @endforeach
            </tbody>

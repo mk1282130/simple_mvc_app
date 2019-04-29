@@ -1,4 +1,6 @@
+@extends('master')
 
+@section('content')
 <h1>Create a Book</h1>
 
 <!-- <form action="/book/store" method="POST"> -->
@@ -8,15 +10,18 @@
     <!-- 419エラーを回避するためのワード -->
     @csrf
 
-    Order new book
+    <a href="/books">Back</a>
+    <br>
+    
     <p>Title:</p>
     <input type="text" name="title">
 
     <p>Desctiption:</p>
-    <input type="password" name="description">
+    <input type="text" name="description">
     
     <br><br>
 
     <input type="submit" value="Create">
 
 </form>
+@endsection
