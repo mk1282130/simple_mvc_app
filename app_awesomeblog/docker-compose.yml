@@ -3,12 +3,7 @@ services:
   nginx:
     image: nginx:1.15.6
     ports:
-      - "80:80"
-      - "8081:8081"
-      - "8082:8082"
-      - "8083:8083"
       - "8084:8084"
-      - "8085:8085"
     depends_on:
       - app
     volumes:
@@ -23,7 +18,7 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: globalit
+      MYSQL_DATABASE: awesome_blog_app
       MYSQL_USER: globalituser
       MYSQL_PASSWORD: GlobalIT@123
       MYSQL_ROOT_PASSWORD: GlobalIT@123
